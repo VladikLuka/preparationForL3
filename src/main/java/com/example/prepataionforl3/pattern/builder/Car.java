@@ -24,20 +24,32 @@ public class Car {
         return maxSpeed;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
+    public static class Builder {
+        Car car = new Car();
 
-    public void setWheels(int wheels) {
-        this.wheels = wheels;
-    }
+        public Builder setId(int id){
+            car.id = id;
+            return this;
+        }
 
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed;
-    }
+        public Builder setModel(String model){
+            car.model = model;
+            return this;
+        }
 
-    public void setId(int id) {
-        this.id = id;
+        public Builder setWheels(int wheels){
+            car.wheels = wheels;
+            return this;
+        }
+
+        public Builder setMaxSpeed(int maxSpeed){
+            car.maxSpeed = maxSpeed;
+            return this;
+        }
+
+        public Car build(){
+            return car;
+        }
     }
 
     @Override
