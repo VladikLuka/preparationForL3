@@ -1,0 +1,1 @@
+AbstractFactory is used to union entities by some type e.g. Company, Furniture, Car models etc.
